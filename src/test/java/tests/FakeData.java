@@ -11,7 +11,7 @@ public class FakeData {
             lastName = faker.name().lastName(),
             userEmail = faker.internet().emailAddress(),
             gender = faker.demographic().sex(),
-            userNumber = faker.numerify("##########"),
+            userNumber = faker.phoneNumber().subscriberNumber(10),
             yearOfBirth = String.valueOf(faker.number().numberBetween(1900, 2020)),
             monthOfBirth = faker.options().option("January", "August", "May", "February", "March"),
             dayOfBirth = String.format("%02d", faker.number().numberBetween(1, 29)),
